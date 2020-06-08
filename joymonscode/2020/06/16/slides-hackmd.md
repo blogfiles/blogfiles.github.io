@@ -3,6 +3,7 @@ title: Scientific Debugging
 tags: Slides, Talk
 description: View the slide with "Slide Mode".
 theme: uncover
+marp: true
 header: Scientific Debugging
 ---
 
@@ -18,7 +19,7 @@ header: Scientific Debugging
 
 > Debugging is the process of identifying and removing errors from computer hardware or software. - Wiki
 
-> Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. - BRIAN W. KERNIGHAN
+> Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. - Brian W. Kernighan
 
 ---
 
