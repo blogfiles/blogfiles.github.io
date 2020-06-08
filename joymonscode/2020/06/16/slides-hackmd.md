@@ -1,13 +1,16 @@
 ---
-title: Test push to GitHub    
+title: Scientific Debugging
 tags: Slides, Talk
 description: View the slide with "Slide Mode".
+theme: uncover
+header: Scientific Debugging
 ---
 
-# Unleash the power!
+# Scientific debugging
 
 <!-- Put the link to this slide here so people can follow -->
-slide: https://hackmd.io/p/template-Talk-slide
+<!--slide: https://hackmd.io/p/template-Talk-slide-->
+## Guaranteed way to reach root cause of bugs
 
 ---
 
