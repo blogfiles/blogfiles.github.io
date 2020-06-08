@@ -14,152 +14,31 @@ header: Scientific Debugging
 
 ---
 
-We have a collaborative session
+# Debugging
 
-please prepare laptop or smartphone to join!
+> Debugging is the process of identifying and removing errors from computer hardware or software. - Wiki
 
----
-
-## Who am I?
-
-- Front-end developer
-- VSCode :heart: 
-- I use tabs. :cat: 
+> Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. - BRIAN W. KERNIGHAN
 
 ---
 
-### 70% of our users are developers. Developers :heart: GitHub.
+# Debugging problems 
+
+- It is an essential skill along with coding but different than coding
+- It needs a context. We loose context when we are distracted
+- Debugging may take more than 8 hours
+- Debugging may require more than 1 debugger at different times
+- Trial and Error will help in 'Hello World' programs only
 
 ---
 
-{%youtube E8Nj7RwXf0s %}
+# Scientific method to debug
 
+- Based on scientific method
+- Hypothesis driven
+- Documentation
+- Applicable to any debugging
+ 
 ---
 
-### Usage flow
 
----
-
-
-```graphviz
-digraph {
-  compound=true
-  rankdir=RL
-
-  graph [ fontname="Source Sans Pro", fontsize=20 ];
-  node [ fontname="Source Sans Pro", fontsize=18];
-  edge [ fontname="Source Sans Pro", fontsize=12 ];
-
-
-  subgraph core {
-    c [label="Hackmd-it \ncore"] [shape=box]
-  }
-  
-  c -> sync [ltail=session lhead=session]
-
-  subgraph cluster1 {
-     concentrate=true
-    a [label="Text source\nGithub, Gitlab, ..."] [shape=box]
-    b [label="HackMD Editor"] [shape=box]
-    sync [label="sync" shape=plaintext ]
-    b -> sync  [dir="both"]
-    sync -> a [dir="both"]
-    label="An edit session"
-  }
-}
-```
-
----
-
-### Architecture of extension
-
----
-
-![](https://i.imgur.com/ij69tPh.png)
-
----
-
-## Content script
-
-- Bind with each page
-- Manipulate DOM
-- Add event listeners
-- Isolated JavaScript environment
-  - It doesn't break things
-
----
-
-# :fork_and_knife: 
-
----
-
-<style>
-code.blue {
-  color: #337AB7 !important;
-}
-code.orange {
-  color: #F7A004 !important;
-}
-</style>
-
-- <code class="orange">onMessage('event')</code>: Register event listener
-- <code class="blue">sendMessage('event')</code>: Trigger event
-
----
-
-# :bulb: 
-
----
-
-- Dead simple API
-- Only cares about application logic
-
----
-
-```typescript
-import * as Channeru from 'channeru'
-
-// setup channel in different page environment, once
-const channel = Channeru.create()
-```
-
----
-
-```typescript
-// in background script
-const fakeLogin = async () => true
-
-channel.answer('isLogin', async () => {
-  return await fakeLogin()
-})
-```
-
-<br>
-
-```typescript
-// in inject script
-const isLogin = await channel.callBackground('isLogin')
-console.log(isLogin) //-> true
-```
-
----
-
-# :100: :muscle: :tada:
-
----
-
-### Wrap up
-
-- Cross envornment commnication
-- A small library to solve messaging pain
-- TypeScript Rocks :tada: 
-
----
-
-### Thank you! :sheep: 
-
-You can find me on
-
-- GitHub
-- Twitter
-- or email me
