@@ -17,7 +17,7 @@ transitionOptions:  "default, tango, pygments, kate, monochrome, espresso, zenbu
 
 By
 
-Joy George K 
+Joy George Kunjikkuru 
 
 `A passionate software engineer to solve problems regardless of tools & technologies`
 
@@ -31,6 +31,7 @@ Joy George K
 > Automation is the technology by which a process or procedure is performed with minimal human assistance. - wiki
 
 - Every automation includes coding, debugging and maintenance.
+- Doing judgement is difficult in coding.
 - It needs time other than doing the real job
 --
 
