@@ -30,15 +30,20 @@ Joy George Kunjikkuru
 
 > Automation is the technology by which a process or procedure is performed with minimal human assistance. - wiki
 
-- Every automation includes coding, debugging and maintenance.
-- Doing judgement is difficult in coding.
-- It needs time other than doing the real job
+>Automate your tasks before you automate for others.
+
+ but....
+
 --
 
-## Debugging is hard
+## Is automation free?
 
-- Sometime is may not be easy to automate especially when there are lot of combinations. Hence the debugging.
-- Threading is a black magic to many developers
+- It needs time other than doing the real job
+- Every automation includes coding, debugging and maintenance.
+- Doing judgement is difficult in coding.
+- Sometime it may not be easy to automate especially when there are lot of combinations.
+- Debugging is hard.
+- Threading is still a black magic to many developers
 
 ---
 
