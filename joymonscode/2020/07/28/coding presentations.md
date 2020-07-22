@@ -1,3 +1,12 @@
+# What is covered?
+
+- What is coding presentation
+- Intro to Reveal.JS
+- Working with Reveal.JS
+- Presenting Reveal.JS
+- Pros & Cons
+- Final thoughts
+
 # What is coding presentations
 
 - Write markdown
@@ -6,26 +15,38 @@
   - Paid
     - https://gitpitch.com/
   - Free
-    - RevealJS
-# Intro to Reveal
+    - Reveal.JS
+
+# Intro to Reveal.JS
 
 - Originally started as HTML based presentation
 - Later added support for markdown
 - Open source - https://github.com/hakimel/reveal.js
 - Hosted service available. We can host in GitHub pages of our own web sites
 - Mobile view
-- VS Code plug-in available
+- Code highlighting
+
+# Working with Reveal
+
+- Editors
+  - VS Code plug-in available
+  - Online Slides.com
+  - Any text editor for HTML
 - Runs on conventions --- means slide in right side -- means slide in bottom
-- Some features are still HTML only eg:fragmented view
-- Supports plug-ins. eg: Handling events
+- Speaker notes
+- Linking slides
+- Supports custom coded plug-ins. eg: Handling events using JavaScript
+- Some features are still HTML only
+  - eg:fragmented view {.fragment}
+  - https://github.com/rstudio/revealjs/issues/44
 
-https://github.com/rstudio/revealjs/issues/44
+# Presenting with Reveal.JS
 
-or
-* Item 1 <!-- .element: class="fragment" -->
-* Item 2 <!-- .element: class="fragment" -->
-
-[Original author's slides ](https://www.w3.org/2013/06/revealjs/#/)
+- Zoom in and out (alt+click)
+- Press . to hide slide
+- Touch friendly
+- Speaker notes will show on pressing 's'. It has timer feature
+- Timer is available to keep track of time.
 
 # Advantages
 
@@ -34,9 +55,11 @@ or
 
 # Disadvantages
 
-- Still not generally accepted
-- 
+- Still not generally accepted.
+- Obvious features in presentation tools such as text over images is not easy.
 
-# Can it replace PowerPoint
+# Final notes
 
-- May not really
+- May not replace PowerPoint or Keynote in the near future
+- Developers can easily adopt.
+- [Original author's slides ](https://www.w3.org/2013/06/revealjs/#/)

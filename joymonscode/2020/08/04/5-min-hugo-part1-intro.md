@@ -28,11 +28,11 @@ Joy George Kunjikkuru
 
 ## How it is organized
 
-- Limiting to 5 mins
-- Method
-  - Not a live hands on coding session. Code may be copy pasted from working version.
-  - Repetitive things will be fast forwarded. 
-  - One or two concepts in one episode.
+- Limiting to 5 mins {.fragment}
+- One or two concepts in one episode. {.fragment}
+- Method {.fragment}
+  - Not a live hands on coding session. Code may be copy pasted from working version. {.fragment}
+  - Repetitive things will be fast forwarded. {.fragment}
 
 --
 
@@ -111,4 +111,10 @@ Joy George Kunjikkuru
 
 ## Architecture of JoymonOnline.in
 
+### Existing
+### New
+
+<aside class="notes">
+		Describe about both architectures
+	</aside>
 ---
