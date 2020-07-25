@@ -16,15 +16,19 @@
     - https://gitpitch.com/
   - Free
     - Reveal.JS
+  - [Coding Presentations Comparison](https://joymonscode.blogspot.com/2019/10/coding-presentations.html)
+
 
 # Intro to Reveal.JS
 
 - Originally started as HTML based presentation
 - Later added support for markdown
 - Open source - https://github.com/hakimel/reveal.js
-- Hosted service available. We can host in GitHub pages of our own web sites
 - Mobile view
 - Code highlighting
+- [Hosted service available.](https://slides.com/)
+- We can host in GitHub pages of our own web sites
+
 
 # Working with Reveal
 
@@ -39,6 +43,10 @@
 - Some features are still HTML only
   - eg:fragmented view {.fragment}
   - https://github.com/rstudio/revealjs/issues/44
+
+  <aside class="notes">
+		Don't cover all the features
+	</aside>
 
 # Presenting with Reveal.JS
 
