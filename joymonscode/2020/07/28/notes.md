@@ -65,6 +65,7 @@
 
 - Still not generally accepted.
 - Obvious features in presentation tools such as text over images is not easy.
+- Large slides may get cropped
 
 # Final notes
 
