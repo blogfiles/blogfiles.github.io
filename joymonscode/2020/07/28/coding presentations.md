@@ -75,8 +75,41 @@ Joy George Kunjikkuru
 - Linking slides
 - Supports custom coded plug-ins. eg: Handling events using JavaScript
 - Some features are still HTML only
-  - eg:fragmented view {.fragment}
-  - https://github.com/rstudio/revealjs/issues/44
+- eg:fragmented view {.fragment}
 
+    <aside class="notes">
+		Don't cover all the features
+    </aside>
 
 ---
+
+# Presenting with Reveal.JS
+
+- Zoom in and out (alt+click)
+- Press . to hide slide
+- Touch friendly
+- Speaker notes will show on pressing 's'. It has timer feature
+- Timer is available to keep track of time.
+
+---
+
+# Advantages
+
+- Keep in source control repo
+- Text is easy to compare for changes
+
+--
+
+# Disadvantages
+
+- Still not generally accepted.
+- Obvious features in presentation tools such as text over images is not easy.
+- Large slides may get cropped
+
+---
+
+# Final notes
+
+- May not replace PowerPoint or Keynote in the near future
+- Developers can easily adopt.
+- [Original author's slides ](https://www.w3.org/2013/06/revealjs/#/)
