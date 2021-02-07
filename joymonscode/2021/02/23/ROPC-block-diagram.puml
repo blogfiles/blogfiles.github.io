@@ -1,0 +1,23 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define AzurePuml https://raw.githubusercontent.com/RicardoNiepel/Azure-PlantUML/release/2-1/dist
+!include AzurePuml/AzureCommon.puml
+!include AzurePuml/Databases/all.puml
+!include AzurePuml/Identity/all.puml
+!include AzurePuml/Compute/all.puml
+!include AzurePuml/Compute/AzureFunction.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/Azure-PlantUML/release/2-1/dist/AzureCommon.puml
+title Container diagram for Azure ROPC authentication into SharePoint
+Person(customer, Customer, "A customer of the web application")
+
+System_Boundary(c1, "Document Management") {
+    AzureAppService(webAPI, "DocumentManagement API", "ASP.Net WebAPI", "API to interact with document management")
+    Container(spa, "DocumentManagement SPA", "JavaScript, Angular", "Browser app to interact with document management")
+    AzureActiveDirectory(AAD, "AAD", "Azure Active Directory", "Identity provider")
+    Container(sharePoint, "SharePoint.com", "SharePoint", "Stores and manages documents")
+Rel(customer, webAPI, "Uses", "HTTPS")
+Rel(customer, spa, "Uses", "HTTPS")
+Rel(webAPI, sharePoint, "Invoke actions using Graph API","access token")
+Rel_Neighbor(webAPI, AAD, "GetAccessToken","ROPC (Appregistration Id, service account name, service account password)")
+}
+@enduml
