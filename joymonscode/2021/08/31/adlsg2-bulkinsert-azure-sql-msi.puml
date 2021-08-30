@@ -1,0 +1,28 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define AzurePuml https://raw.githubusercontent.com/RicardoNiepel/Azure-PlantUML/release/2-1/dist
+!include AzurePuml/AzureCommon.puml
+!include AzurePuml/Databases/all.puml
+!includeurl AzurePuml/Storage/AzureDataLakeStorage.puml
+!include AzurePuml/Identity/all.puml
+!include AzurePuml/Compute/all.puml
+!include AzurePuml/Compute/AzureFunction.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/Azure-PlantUML/release/2-1/dist/AzureCommon.puml
+title Container diagram for Azure Data Lake Gen2 to Azure SQL bulk insert using Managed Identity.
+
+System_Boundary(ADLS,"Network protected"){
+    AzureDataLakeStorage(ADLSG2, "File Store", "Azure Data Lake Storage Gen2", "Stores and manages documents")
+    
+}
+System_Boundary(Common,"Common"){
+   AzureActiveDirectory(AAD, "AAD", "Azure Active Directory", "Identity provider")
+ 
+}
+System_Boundary(c1, "Network protected") {
+    AzureSqlDatabase(AzureSQL, "Azure SQL DB ", "Azure SQL", "Database that bulk insert data from ADLS Gen2")
+    AzureDataLakeStorage(ADLSG2, "File Store", "Azure Data Lake Storage Gen2", "Stores and manages documents")
+    Rel_Neighbor(AzureSQL, ADLSG2, "Read to Bulk insert","System-assigned Managed Identity")
+    Rel(AzureSQL, AAD, "MSI Support","")
+    Rel(ADLSG2, AAD, "MSI Support","")
+}
+@enduml
