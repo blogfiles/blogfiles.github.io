@@ -31,7 +31,9 @@ System_Boundary(c1, "Network protected") {
 legend right
 
 The ADLS Gen2 allows network connections only from Azure SQLs
-az sql server update -g <Resource group name of Azure SQL Server> -n <Azure SQL Server Name not DB name> -i
+Link to blog post https://joymonscode.blogspot.com/2021/03/azure-enterprise-managed-identity.html
+Command to enable system-assigned managed identity to Azure SQL 
+    az sql server update -g <Resource group name of Azure SQL Server> -n <Azure SQL Server Name not DB name> -i
 endlegend
 
 caption Copyright © 2021 Joy George Kunjikkuru 
