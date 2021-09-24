@@ -1,4 +1,4 @@
-@startuml
+@startuml Undocumented Feature - Azure SQL accessing ADLS Gen2 using MSI
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 !define AzurePuml https://raw.githubusercontent.com/RicardoNiepel/Azure-PlantUML/release/2-1/dist
 !include AzurePuml/AzureCommon.puml
@@ -8,8 +8,10 @@
 !include AzurePuml/Compute/all.puml
 !include AzurePuml/Compute/AzureFunction.puml
 !includeurl https://raw.githubusercontent.com/RicardoNiepel/Azure-PlantUML/release/2-1/dist/AzureCommon.puml
-title Container diagram for Azure Data Lake Gen2 to Azure SQL bulk insert using Managed Identity.
-
+title Azure Data Lake Gen2 to Azure SQL bulk insert using Managed Identity with network protection
+center header 
+Undocumented feature - Azure SQL accessing ADLS Gen2 using MSI
+endheader
 System_Boundary(ADLS,"Network protected"){
     AzureDataLakeStorage(ADLSG2, "File Store", "Azure Data Lake Storage Gen2", "Stores and manages documents")
     
@@ -25,4 +27,12 @@ System_Boundary(c1, "Network protected") {
     Rel(AzureSQL, AAD, "MSI Support","")
     Rel(ADLSG2, AAD, "MSI Support","")
 }
+
+legend right
+
+The ADLS Gen2 allows network connections only from Azure SQLs
+
+endlegend
+
+caption Copyright © 2021 Joy George Kunjikkuru 
 @enduml
