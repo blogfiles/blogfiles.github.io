@@ -17,7 +17,7 @@ GO
 ------------ Truncate and perform bulk insert ------------
 TRUNCATE TABLE dbo.companies
 BULK INSERT dbo.companies
-FROM 'companies.csv'
+FROM '<path to .csv> excluding container name'
 WITH (
 DATA_SOURCE='ADLSG2BLOBDS',
 FORMAT = 'CSV'
