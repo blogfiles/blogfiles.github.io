@@ -7,4 +7,4 @@
 docker --version
 docker run --env NVIDIA_DISABLE_REQUIRE=1 --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody
 docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
-docker run --gpus all --rm debian:10-slim nvidia-smi
+docker run --gpus all --rm debian:10-slim nvidia-smis
