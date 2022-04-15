@@ -1,2 +1,2 @@
 # blogfiles.github.io
-repo for hosting images used in blogs
+My personal repo for hosting images, slides used in blogs and vlogs
