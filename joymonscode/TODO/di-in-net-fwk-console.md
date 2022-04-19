@@ -11,18 +11,17 @@ transitionOptions:  "default, tango, pygments, kate, monochrome, espresso, zenbu
 
 ---
 
-# .Net Core in .Net Framework
+## .Net Core Model in .Net Framework
 
-### Using .Net Core DI in .Net Framework Console Application
+##### Using .Net Core DI in .Net Framework Console Application
 
 By
 
-Joy George Kunjikkuru 
+Joy George Kunjikkuru (Solutions Architect) 
 
 `A passionate software engineer to solve problems regardless of tools & technologies`
 
-[https://joymononline.in](joymononline.in)
-[https://joymonscode.blogspot.com/](https://joymonscode.blogspot.com/)
+ [https://joymononline.in](joymononline.in) | [https://joymonscode.blogspot.com/](https://joymonscode.blogspot.com/)
 
 ---
 
