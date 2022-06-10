@@ -1,0 +1,23 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define AzurePuml https://raw.githubusercontent.com/RicardoNiepel/Azure-PlantUML/release/2-1/dist
+!include AzurePuml/AzureCommon.puml
+!include AzurePuml/Databases/all.puml
+!include AzurePuml/Identity/all.puml
+!include AzurePuml/Compute/all.puml
+!include AzurePuml/Compute/AzureFunction.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/Azure-PlantUML/release/2-1/dist/AzureCommon.puml
+title Container diagram for Azure Function Calling Azure SQL
+Person(customer, Customer, "A customer of the web application")
+Container(demon, "Nightly daemon apps", ".Net 6.0", "Daemon apps to generate reports, send reminders etc...")
+System_Boundary(c1, "System") {
+    AzureFunction(webAPI, "API", "ASP.Net WebAPI, Consumption plan", "API to interact with database")
+    AzureSqlDatabase(sqlDB, "Azure SQL DB", "S3 DTU-100", "Store data")
+    Container(webApp, "WebApp", "ASP.Net MVC, .Net 6.0", "User facing application")
+
+    Rel(customer, webApp, "Uses", "HTTPS")
+    Rel(demon,webAPI,  "Uses", "HTTPS")
+    Rel_Neighbor( webApp,webAPI, "Invoke API","HTTPS")
+    Rel_Neighbor(webAPI, sqlDB, "Data access","TCP 1433, MSI")
+}
+@enduml
